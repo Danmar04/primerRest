@@ -1,18 +1,9 @@
 package es.babel.primerRest.repository;
 
-import es.babel.primerRest.dto.AlumnoVO;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import es.babel.primerRest.entities.AlumnoEntity;
 
-public interface AlumnoRepository {
+public interface AlumnoRepository extends JpaRepository<AlumnoEntity, Long>{
 
-    public AlumnoVO getAlumno(long id);
-
-    public List<AlumnoVO> getAll();
-
-    public String createAlumno(AlumnoVO alumnoVO);
-
-    public String updateAlumno(long id, AlumnoVO alumnoVO);
-
-    public String deleteAlumno(long id);
 }
